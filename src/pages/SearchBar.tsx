@@ -38,7 +38,7 @@ const SearchBar = () => {
       const isPokemonInFavorites = favoritePokemon.some(p => p.name === searchedPokemonData.name);
       setIsFavorite(isPokemonInFavorites);
     }
-  }, [favoritePokemon]); 
+  }, []); 
   
 
   const searchPokemon = async () => {
@@ -102,13 +102,13 @@ const SearchBar = () => {
           value={pokemonName}
           onChange={(e) => setPokemonName(e.target.value)}
           onKeyPress={handleKeyPress}
-          className="border border-gray-300 rounded-l-md py-2 px-4 block w-full focus:outline-none focus:border-green-400"
+          className="border border-gray-300 rounded-l-md py-2 px-4 block w-full focus:outline-none focus:border-teal-300"
           placeholder="Search..."
         />
         <button
           disabled={!pokemonName}
           onClick={searchPokemon}
-          className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-r-md ${
+          className={`bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-r-md ${
             !pokemonName && "opacity-50 cursor-not-allowed"
           }`}
         >
@@ -135,25 +135,25 @@ const SearchBar = () => {
             />
             <div className="flex justify-center items-center">
               <div>
-                <h3 className="bg-green-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm capitalize">
+                <h3 className="bg-blue-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm capitalize">
                   Species: {pokemon.species}
                 </h3>
-                <h3 className="bg-green-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm capitalize">
+                <h3 className="bg-blue-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm capitalize">
                   Type: {pokemon.type}
                 </h3>
-                <h4 className="bg-green-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm">
+                <h4 className="bg-blue-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm">
                   Hp: {pokemon.hp}
                 </h4>
-                <h4 className="bg-green-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm">
+                <h4 className="bg-blue-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-2 text-left text-sm">
                   Attack: {pokemon.attack}
                 </h4>
-                <h4 className="bg-green-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-16 text-left text-sm">
+                <h4 className="bg-blue-600 text-white font-bold p-1 pl-3 rounded-lg w-48 mb-16 text-left text-sm">
                   Defense: {pokemon.defense}
                 </h4>
                 <button
                   onClick={toggleFavorite}
                   disabled={isFavorite}
-                  className={`bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md mb-20 ${
+                  className={`bg-blue-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md mb-20 ${
                     isFavorite && "opacity-50 cursor-not-allowed"
                   }`}
                 >

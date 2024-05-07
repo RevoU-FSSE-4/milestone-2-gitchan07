@@ -29,7 +29,7 @@ const PokemonList = () => {
 
   useEffect(() => {
     fetchPokemons();
-  }, []);
+  }, [fetchPokemons]);
 
   return (
     <>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./pages/Header";
 import SearchBar from "./pages/SearchBar";
@@ -10,14 +10,16 @@ import FavoritePage from "./pages/PokemonFavorite";
 function App() {
   return (
     <div className="App">
+        <Router>
       <Header />
       <Routes>
         <Route path="/" element={<SearchBar />} />
         <Route path="/list" element={<PokemonList />} />
         <Route path="/favorite" element={<FavoritePage />} />
       </Routes>
+        </Router>
     </div>
   );
 }
 
-export default App;
+export default App;
