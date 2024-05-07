@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./pages/Header";
 import SearchBar from "./pages/SearchBar";
 import PokemonList from "./pages/PokemonList";
-import FavoritePage from "./pages/PokemonFavorite";
+import PokeFav from "./pages/PokemonFavorite";
 
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
         <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<SearchBar />} />
         <Route path="/list" element={<PokemonList />} />
-        <Route path="/favorite" element={<FavoritePage />} />
+        <Route path="/" element={<SearchBar />} />
+        <Route path="/favorite" element={<PokeFav />} />
       </Routes>
         </Router>
     </div>

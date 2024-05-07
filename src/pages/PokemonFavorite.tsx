@@ -39,7 +39,7 @@ const PokemonFavorite: React.FC = () => {
   );
 };
 
-const FavoritePage: React.FC = () => {
+const PokeFav: React.FC = () => {
   return (
     <div className="flex items-center justify-center">
       <div className=" p-4 rounded-md">
@@ -53,4 +53,4 @@ const FavoritePage: React.FC = () => {
   );
 };
 
-export default FavoritePage;
+export default PokeFav;
